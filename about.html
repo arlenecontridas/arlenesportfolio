@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Arlene | About </title>
+
+    <style>
+
+.about-content{
+    width: 80%;
+    height: 330px;
+    background-color:rgb(4, 4, 38);
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgb(255, 255, 255);
+    display: flex;
+    margin-top: 50px;
+    margin-left: 80px;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+
+}   
+.about-content img{
+    height: 280px;
+    max-width: 100%;
+    border-radius: 40%;
+    border-color: #262525;
+    box-shadow: 0 0 15px 7px rgb(59, 59, 165);
+}
+.about-text{
+    width:100%;
+    max-width: 550px;
+    
+}
+.about-text p:nth-child(1){
+    color: #ffffff;
+    font-family: Lucida Sans;
+    font-weight: bolder;
+    font-size: 23px;
+    line-height:60px;
+    margin-bottom: 1rem;
+}
+.about-text p:nth-child(2){
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: Verdana;
+    font-weight: bold;
+    line-height: 5px;
+    margin-bottom: 1rem;
+}
+.about-text p:nth-child(3),
+.about-text p:nth-child(4){
+   color: #fcfcfc;
+   font-family: calibri;
+   font-size: 16px;
+   margin-bottom: 10px;
+
+}
+
+.about-text a{
+            text-decoration: none;
+            font-size: 13px;
+            font-family: sans-serif;
+            color: #fff;
+            background: rgb(49, 49, 90);
+            width: 20px;
+            padding: 3px 3px;
+            text-align: center;
+            border-radius: 4px;
+            
+        }
+        .about-text a span{
+            position: relative;
+            width: 1.5rem;
+            visibility: hidden;
+        }
+        .about-text a span:after{
+            content: '21D3';
+            font-size: 1.5rem;
+            position: absolute;
+            padding-left: 10px;
+            animation: down 1s linear infinite;
+        }
+        @keyframes down{
+            from{
+                top: 10px;
+                opacity: 0;
+            }
+            to{
+                top: 10px;
+                opacity: 1;
+            }
+        }
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column; 
+        align-items: center;
+        height: auto; 
+    }
+
+    .about-content img {
+        margin-bottom: 15px;
+        margin-top: 20px;
+    }
+    .about-text button{
+        font-size: 15px;
+    }
+    .about-text p:nth-child(1){
+        font-size: 15px;
+        text-align: center;
+    }
+    .about-text p:nth-child(2),
+    .about-text p:nth-child(3),
+    .about-text p:nth-child(4){
+         font-size: 12px;
+         text-align: center;
+}
+    
+}
+
+
+h1{
+    font-size: 80px;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 40px; 
+       text-align: center;
+    }
+}
+
+.skills-bar{
+    width: 50%;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 50px 50px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+}
+.skills-bar .bar{
+    margin: 20px 0;
+}
+.skills-bar .bar:first-child{
+    margin-top: 0px;
+}
+.skills-bar .bar .info{
+    margin-bottom: 5px;
+}
+.skills-bar .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    opacity: 0;
+    animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+    100%{
+        opacity: 1;
+    }
+    
+}
+.skills-bar .bar .progress-line{
+    position: relative;
+    height: 10px;
+    width: 100%;
+    background: #f0f0f0;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+                        0px 1px rgba(255, 255, 255, 0.8);
+    animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+                        
+
+}                     
+.bar .progress-line span{
+    height: 100%;
+    width: 80%;
+    background: #0a0a64;
+    position: absolute;
+    border-radius: 10px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-line.html span{
+   width: 85%;
+}
+.progress-line.css span{
+    width: 77%;
+}
+.progress-line.js span{
+    width: 45%;
+}
+.progress-line.java span{
+    width:  56%;
+}
+.progress-line.c++ span{
+    width: 90%;
+}
+.progress-line.sql span{
+    width: 87%;
+}
+.progress-line.ps span{
+    width: 80%;
+}
+
+.bar .progress-line span::before{
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+.bar .progress-line span::after{
+    position: absolute;
+    content: "90%";
+    right: 0;
+    top: -28px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    background: #000;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+
+.progress-line.html span::after{
+    content: "85%";
+}
+.progress-line.css span::after{
+    content: "77%";
+}
+.progress-line.js span::after{
+    content: "45%";
+}
+.progress-line.java span::after{
+    content: "56%";
+}
+.progress-line.c++ span::after{
+    content: "90%";
+}
+.progress-line.sql span::after{
+    content: "87%";
+}
+.progress-line.ps span::after{
+    content: "80%";
+}
+
+.education{
+        width: 80%;
+        margin: 0 auto;
+        background: rgb(16, 16, 99);
+        border-radius: 10px;
+        padding: 30px 30px;
+        box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.2);
+
+}
+.main.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px
+}
+.col header.title{
+    font-family: Verdana;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 5px;
+    
+}
+.col content{
+    padding: 0px 30px;
+    border-left: 2px solid #ffffff;
+}
+.col .content .box{
+    position: relative;
+    padding: 20px;
+    border: 2px solid #000000;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+.col .content .box:hover{
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
+}
+.col content .box::before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    top: 0;
+    background-color: #1d11a3;
+    border: 2px solid white;
+}
+.box h4{
+    position: relative;
+    color: #04066e;
+    font-size: 20px ;
+}
+.box h3{
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 4px;
+    font-family: helvetica;
+    color: rgb(41, 41, 247)
+}
+.box p{
+    line-height: 1.2;
+    color: #666;
+    font-size: 17px;
+}
+
+@media(max-width: 1200px){
+    main.row{
+        grid-template-columns: 1fr;
+    }
+    .row .col:nth-child(2){
+        margin-top: 30px;
+    }
+}
+
+    .animate{
+        animation-duration: 1s;
+        animation-fill-mode: both;
+    }
+    .animate--fast{
+        animation-duration: 0.6 s;
+    }
+    .animate--slow{
+        animation-duration: 3 s;
+    }
+    @keyframes slideInLeft{
+            from{
+                transform: translateX(-300px);
+            }
+            to{
+               transform: translate3d(0);
+            }
+        }
+
+        .slideInLeft{
+            animation-name: slideInLeft;
+            animation-timing-function: ease-in;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background">
+        <img src="img/bg1.png">
+    </div>
+    <nav>
+
+        <a href="#" class="logo">  Arlene.</a>
+
+        <ul>
+            <li> <a href="index.html" class="active">Home</a></li>
+            <li> <a href="about.html">About</a></li>
+            <li> <a href="projects.html">Project</a></li>
+            <li> <a href="contact.html">Contacts</a></li>
+        </ul>
+    </nav>
+    <div class="about-content">
+        <img src="img/Special%20Project%20%231.png"  class="animate slideInLeft">
+        <div class="about-text">
+        <p class="animate slideInLeft animate--fast">About Me</p>
+        <p  class="animate slideInLeft animate--fast">Quality Assistance</p>
+        <p  class="animate slideInLeft animmate--slow">Hi! My name is Arlene Geagonia Contridas. I am your Quality Assistance
+         that is ready to serve. I was born on November 05, 2003, in the lively neighborhood of 
+        Cainta, Rizal. I enjoy singing, savoring tasty food, cooking, watching movies and animes,
+        and most importantly, dancing.</p>
+        <p  class="animate slideInLeft animate--slow">If you want me to check the quality of your websites, do not hesitate to
+         contact me. </p>    
+        <!-----buttons-->
+        
+        <a href="Resume.pdf " download>Download Resume<span></span></a> 
+         </div>
+    
+    </div>
+<!----skills section-->
+        <h1>My Skills</h1>
+            
+        <div class="skills-bar">
+            <div class="bar">
+                <div class="info">
+                   <span>HTML</span>
+            </div>
+            <div class="progress-line html"><span></span></div>
+     </div>
+    
+     <div class="bar">
+        <div class="info">
+           <span>CSS</span>
+    </div>
+    <div class="progress-line css"><span></span>
+    </div>
+
+            
+  <div class="bar">
+       <div class="info">
+           <span>JAVASCRIPT</span>
+              </div>
+              <div class="progress-line js"><span></span></div>
+
+    <div class="bar">
+        <div class="info">
+           <span>C++</span> </div>
+    <div class="progress-line c"><span></span></div>
+
+    <div class="bar">
+        <div class="info">
+           <span>JAVA</span>
+    </div>
+    <div class="progress-line java"><span></span></div>
+
+    <div class="bar">
+        <div class="info">
+           <span>MySql</span>
+    </div>
+    <div class="progress-line sql"><span></span></div>
+
+    <div class="bar">
+        <div class="info">
+           <span>PHOTOSHOP</span>
+    </div>
+    <div class="progress-line ps"><span></span></div>
+        </div>
+    </div>
+              </div> 
+         </div>
+    </div>
+</div>
+
+
+        <div class="education">
+            <main class="row">
+                <div class="col">
+
+                    <header class="title">
+                        <h2><u>EDUCATION</h2></u>
+                    </header>
+
+                    <div class="content">
+
+                        <div class="box">
+                            <h4>Elementary | 2009-2016</h4>
+                            <h3>Francisco P. Felix Elementary School Unit-I</h3>
+                            <p> I've graduated from F. P. Elementary School as one of the top three students in my batch. It's an incredible honor to 
+                                have received numerous awards for my academic achievements and active involvement in extracurricular activities. </p>
+                        </div>
+
+                         <div class="box">
+                            <h4>Junior High School | 2016-2020</h4>
+                            <h3>Rizal Experimental Station and Pilot School of Cottage Industries</h3>
+                            <p>I successfully completed my junior high school journey, marked by a notable achievement—receiving a distinguished award.
+                                 Throughout my time in junior high, I dedicated myself to academic excellence and active participation in various school activities. 
+                                 This award serves as a testament to my hard work and commitment to learning.</p>
+                        </div>
+
+                         <div class="box">
+                            <h4>Senior High School | 2020-2022</h4>
+                            <h3>Arellano University-Andres Bonifacio Campus</h3>
+                            <p>I've successfully completed my high school journey at Arellano University, graduating with High Honor.
+                                Throughout this journey, I not only achieved academic excellence but also garnered specific recognitions, including the titles of 'Best in Work Immersion'.
+                                These awards highlight not only my commitment to overall learning but also my excellence in practical experiences and programming projects. </p>
+                        </div>
+
+                     <div class="box">
+                            <h4>College | 2022-Present</h4>
+                            <h3>Rizal Technological University-Boni Campus</h3>
+                            <p>Currently pursuing my BSIT course at RTU campus.
+                                I take pride in being part of the Academic Achievers and Dean's List, emblematic of my dedication to excellence in my college journey.
+                                 These accolades not only reflect my commitment to academic success but also signify the rigorous effort I invest in my studies. 
+                            </p>
+                        </div>     
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Arlene's Personal Portfolio</title>
+
+    <style>
+        ion-icon:hover{
+            color: rgb(9, 0, 104);
+            transition: all .3s;
+        }
+         @keyframes slideInLeft{
+            from{
+                transform: translateX(-300px);
+            }
+            to{
+               transform: translate3d(0);
+            }
+        }
+        .text-container {
+            animation-name: slideInLeft ;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal ;
+            animation-fill-mode: both;
+
+
+            transform: translateX(-50px);
+        }
+        ion-icon {
+            font-size: 20px;
+            height: 30px;
+            width: 30px;
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            margin-top: 15px;
+            margin-right: 5px;
+            margin-left: 90%;
+            padding: 5px 0;  
+        } 
+        @keyframes slideInRight{
+            from{
+                transform: translateX(300px);
+            }
+            to{
+               transform: translate3d(0);
+            }
+        }
+        ion-icon {
+            animation-name: slideInRight ;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal ;
+            animation-fill-mode: both;
+        }
+        .rotate_1{
+            display: block;
+            height: 400px;
+            position:absolute;
+            bottom: 5rem;
+            left: 50%;
+            border-radius: 50%;
+            -webkit-transition: -webkit-transform 1s;
+        }
+        .rotate_1:hover{
+            -webkit-transform: rotate(360deg) translateZ(0);
+        }
+    </style>
+
+</head>
+<body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    
+    <div class="background">
+        <img src="img/bg1.png">
+    </div>
+        <nav>
+
+            <a href="#" class="logo">  Arlene.</a>
+
+            <ul>
+                <li> <a href="index.html" class="active">Home</a></li>
+                <li> <a href="about.html">About</a></li>
+                <li> <a href="projects.html">Project</a></li>
+                <li> <a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+
+
+        <div class="social-icons">
+        
+        <ul>
+            <li><a href="https://www.facebook.com/abel.contridas" target="_blank">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </a></li>
+            <li><a href="https://instagram.com/rlncntrds?igshid=NzZIODBkYWE4Ng==" target="_blank">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </a></li>
+            <li><a href="https://www.tiktok.com/@arlene.222_t=8i512wj9Htq&_r=1" target="_blank">
+                <ion-icon name="logo-tiktok"></ion-icon>
+            </a></li>
+            <li><a href="https://youtube.com/@contridasarleneg.7352?si=yLmJ_QZVchojVHjp" target="_blank">
+                <ion-icon name="logo-youtube"></ion-icon>
+            </a></li>
+        </ul>
+    
+       </div> 
+
+        <section>
+            <div class="text-container">
+                <p>Hello, bestie! I am</p>
+                <p>Arlene G. Contridas</p>
+                <p>Your Future Quality Assistance</p>
+                <div class="download-resume">
+                <a href="Resume.pdf" target="_blank" download>Download Resume<span></span></a> 
+                </div>
+                
+            
+            </div>
+    
+            <img class="rotate_1" src="img/meme.png">
+        </section>
+    
+</body>
+</html>
+

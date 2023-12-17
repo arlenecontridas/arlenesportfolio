@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Arlene | Contacts </title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .contact{
+            width: 100%;
+            position: relative;
+            height: 100%;
+            padding: 50px 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: url("img/bg1.png");
+            background-color: cover;
+        }
+        .contact .content{
+            max-width: 880px;
+            text-align: center;
+        }
+        .contact .content h2{
+            font-size: 36px;
+            font-weight: 500;
+            color: #fff;
+        }
+        .contact .content p{
+            font-size: 20px;
+            font-weight: 500;
+            color: #000000;
+        }
+       
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .container .contactInfo{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container .contactInfo .box{
+            position: relative;
+            padding: 20px 0;
+            display: flex;
+        }
+        .container .contactInfo .box .text{
+            display: flex;
+            margin-left: 20px;
+            font-size: 16px;
+            color: #fff;
+            flex-direction: column;
+            font-weight: 300;
+        }
+        .container .contactInfo .box .text h3{
+            font-weight: 500;
+            color: #00bcd4;
+        }
+        .contactForm{
+            width: 40%;
+            padding: 40px;
+            background: #fff;
+        }
+        .contactForm h2{
+            font-size: 30px;
+            color: #333;
+            font-weight: bold;
+        }
+        .contactForm .inputBox{
+            position: relative;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .contactForm .inputBox input,
+        .contactForm .inputBox textarea{
+            width: 100%;
+            padding: 5px 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            border-bottom: 2px solid #333;
+            outline: none;
+            resize: none;
+        }
+        .contactForm .inputBox span{
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+            margin: 10px 0;
+            border: none;
+            pointer-events: none;
+            transition: 0.5s;
+            color: #666;
+        }
+        .contactForm .inputBox input:focus ~ span,
+        .contactForm .inputBox input:valid ~ span
+        .contactForm .inputBox textarea:focus ~ span,
+        .contactForm .inputBox textarea:focus ~ span{
+            color: #391e63;
+            font-size: 12px;
+            transform: translateY(-20px);
+        }
+        .contactForm .inputBox input[type="submit"]{
+            width: 100px;
+            background: #00bcd4;
+            columns: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 18px;
+        }
+        @keyframes slideInLeft{
+                from{
+                transform: translateX(-300px);
+            }
+            to{
+               transform: translateX(0);
+            }
+        }
+        .contactInfo , .container ,.contactForm {
+            animation-name: slideInLeft ;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal ;
+            animation-fill-mode: both;
+        }
+        @keyframes slideInRight{
+                from{
+                transform: translateX(300px);
+            }
+            to{
+               transform: translateX(0);
+            }
+        }
+        .contact h2 , p{
+            animation-name: slideInRight ;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-delay: 0s;
+            animation-iteration-count: 1;
+            animation-direction: normal ;
+            animation-fill-mode: both;
+        }
+        @media (max-width: 991px){
+            .contact{
+                padding: 50px;
+            }
+            .content h2{
+                margin-top: 80px;
+            }
+            .container{
+                flex-direction: column;
+            }
+            .container .contactInfo{
+                margin-bottom: 40px;
+            }
+            .container .contactInfo,
+            .contactForm{
+                width: 100%;
+            }
+        }
+    </style>
+    </head>
+    <nav>
+        <a href="#" class="logo">  Arlene.</a>
+
+        <ul>
+            <li> <a href="index.html" class="active">Home</a></li>
+            <li> <a href="about.html">About</a></li>
+            <li> <a href="projects.html">Project</a></li>
+            <li> <a href="contact.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Me</h2>
+            <p> I'd love to hear about you!</p>
+        </div>
+
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><i class="fa fa-map-marker"></i></div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>Alley 80 Block 3 Lakas Tao San Andres Cainta Rizal</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon"><i class="fa fa-phone"></i></div>
+                            <div class="text">
+                                <h3>Phone</h3>
+                                <p>09673190675 | Globe</p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="icon"><i class="fa fa-envelope"></i></div>
+                                <div class="text">
+                                    <h3>Email Address</h3>
+                                    <p>acontridas867@gmail.com</p>
+                                </div>
+                            </div>
+                    </div>  
+                    <div class="contactForm">
+                        <form>
+                            <h2>Send Message</h2>
+                            <div class="inputBox">
+                                <input type="text" name="" required="required">
+                                <span>Full Name</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="text" name="" required="required">
+                                <span>Email</span>
+                            </div>
+                            <div class="inputBox">
+                                <textarea required="required"></textarea>
+                                <span>Type Your Message...</span>
+                            </div>
+                            <div class="inputBox">
+                                <input type="submit" name="" value="Send">
+                            </div>
+
+
+                        </form>
+                    </div>
+            </div>
+    </section>
+    </html>
+    
